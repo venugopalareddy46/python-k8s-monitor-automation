@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: python-automation
+
+spec:
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app: python-automation
+
+  template:
+    metadata:
+      labels:
+        app: python-automation
+
+    spec:
+      containers:
+      - name: python-automation
+
+        image: venugopalareddy/python-k8s-app
+
+        imagePullPolicy: IfNotPresent
+
+        envFrom:
+        - configMapRef:
+            name: python-automation-config
+
+        ports:
+        - containerPort: 8080
