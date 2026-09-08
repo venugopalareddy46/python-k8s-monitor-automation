@@ -1,5 +1,3 @@
-Below is a **modern, professional GitHub-ready `README.md`** for your project. You can copy the entire block directly into `README.md`.
-
 # 🐍 Python Automation Application Using Kubernetes
 
 <div align="center">
